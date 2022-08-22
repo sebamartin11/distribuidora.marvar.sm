@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <title>MarvarSnacks</title>
+</head>
+
+<body>
+    <!-- navbar inicia -->
+    <nav class="navbar navbar-expand-md navbar-dark bgnav">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Distribuidora Marvar</a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./iniciarsesion.html">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar fin -->
+    <!-- jumbotron Inicia -->
+    <div class="jumbotron">
+        <h1>Distribuidora Marvar</h1>
+        <p>Distribuidora de alimentos</p>
+        <button type="button" class="btn btn-primary">Mas info</button>
+    </div>
+    <!-- jumbotron Fin -->
+    <!-- section contactos -->
+    <h2>Contacto</h2>
+    <section class="container-fluid">
+        <div class="row">
+            <aside class="col-sm-12 col-md-12 col-lg-6 col-xl-6 alcon">
+            </aside>
+            <aside class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="arcon">
+                    <h3><u>Atención al cliente</u></h2>
+                    <p>Completá el siguiente formulario.</p>
+                    <p>¡Te responderemos lo antes posible!</p>
+                </div>     
+                <form action="/action_page.php" class="was-validated">
+                    <div class="form-group">
+                        <label for="uname">Nombre:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Nombre" name="nombre"required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por Favor rellene este campo.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Apellido:</label>
+                        <input type="text" class="form-control" id="surname" placeholder="Apellido" name="apellido"
+                            required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por Favor rellene este campo.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono:</label>
+                        <input type="number" class="form-control" id="pwd" placeholder="Telefono" name="telefono"
+                            required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por Favor rellene este campo.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="pwd" placeholder="tuemail@gmail.com" name="telefono"
+                            required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por Favor rellene este campo.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label> <br>
+                        <textarea name="comentarios" id="comentarios" cols="50"rows="5" required placeholder="Dejanos su mensaje"></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Acepto los términos y condiciones. Leer más.
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Marque esta casilla de verificación para continuar.</div>
+                        </label>
+                        <br>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Deseo recibir novedades y ofertas.
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Marque esta casilla de verificación para continuar.</div>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </aside>
+        </div>
+    </section>
+    <!-- footer inicia -->
+    <footer>
+        <div>
+            <p>Todos los derechos reservados por Copyright</p>
+            <p>Desarrollado por Sebastian Martin</p>
+            <div class="redes">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- footer fin -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
+</body>
+</html>
