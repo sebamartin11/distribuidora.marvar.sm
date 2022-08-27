@@ -1,120 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
-/* css body */
-body{
-    background-color: #1df8b2;
-}
-/* css barra navegacion */
-.bgnav{
-    background-color: #005899;
-}
-.nav-link{
-    color: #1df8b2 !important;
-    text-shadow: 0 0 5px #333;
-}
-.navbar-brand::before{
-    content: url(./img/logomarvarsnacks.png);
-}
-.navbar-brand{
-    font-weight: bold;
-    color: #1df8b2 !important;
-    text-shadow: 0 0 5px #000;
-}
-/* jumbotron */
-.jumbotron{
-    background-image: url(./img/fondo.webp);
-    background-size: cover;
-    background-position: top;
-    color: #383bff !important;
-    border-radius: 0;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 0 0 2px #000;
-}
-/* css botones */
-.btn-primary{
-    background-color: #005899;
-}
-.btn-primary:hover{
-    background-color: #2bdca4db;
-}
-/* css title 2 */
-h2{
-    background-color: #005899;
-    text-align: center;
-    color: #1df8b2;
-    padding: 10px;
-    margin: 0;
-}
-/* css aside izq */
-.al{
-    background-image: url(./img/camionmarvar.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-}
-/* css aside der */
-.ar h3{
-    text-align: center;
-    color: #005899;
-}
-.ar{
-    color: #005899;
-    font-weight: 600;
-}
-/* parrafo aside */
-p::selection{
-    color:#005899;
-    background-color: #1df8b2;
-}
-/* hover img */
-.card:hover{
-    transform: scale(1.1);
-    transition: all 0.8s;
-}
-/* aside left contactos.html */
-.alcon{
-    width: 100%;
-    height: 100%;
-    content: url(../assets/img/contacto.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: 0;
-}
-.arcon{
-    text-align: center;
-    color: #005899;
-    font-weight: bold;
-    font-size: 25px;
-}
-.form-group{
-    color: #005899;
-    font-weight: bold;
-    font-size: 20px;
-}
-textarea{
-    width: 100%;
-}
-/* css footer */
-footer{
-    background-color: #1df8b2;
-    background-image: linear-gradient(225deg, #1df8b2 0%, #005899 46%, #1df8b2 100%);
-    text-align: center;    
-    color: #fff;
-    font-family: 'DynaPuff', cursive;
-    padding: 20px;
-}
-/* css redes */
-.redes{
-    font-size: 30px;
-    letter-spacing: 6px;
-}
-@media only screen and (min-widht:320px){
-    body{
-        grid-template-columns: 1fr;
-    }
-    footer{
-        grid-template-columns: 1fr;
-    }
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #1df8b2;
+}
+body h2 {
+  background-color: #005899;
+  text-align: center;
+  color: #1df8b2;
+  padding: 10px;
+  margin: 0;
+}
+
+.bgnav {
+  background-color: #005899;
+}
+
+.nav-link {
+  color: #1df8b2 !important;
+  text-shadow: 0 0 5px #333;
+}
+
+.navbar-brand::before {
+  content: url(./img/logomarvarsnacks.png);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #1df8b2 !important;
+  text-shadow: 0 0 5px #000;
+}
+
+.jumbotron {
+  background-image: url(./img/fondo.webp);
+  background-size: cover;
+  background-position: top;
+  color: #005899 !important;
+  border-radius: 0;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 0 2px #000;
+}
+
+.btn-primary {
+  background-color: #005899;
+  margin: 2vh;
+}
+
+.btn-primary:hover {
+  background-color: rgba(43, 220, 164, 0.8588235294);
+}
+
+.al {
+  background-image: url(./img/camionmarvar.png);
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  width: 100%;
+}
+
+.ar {
+  color: #005899;
+  font-weight: 600;
+}
+.ar h3 {
+  text-align: center;
+  color: #005899;
+}
+
+p::selection {
+  color: #005899;
+  background-color: #1df8b2;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
+}
+
+.alcon {
+  width: 100%;
+  height: 100%;
+  content: url(../assets/img/contacto.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+
+.arcon {
+  text-align: center;
+  color: #005899;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.form-group {
+  color: #005899;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+textarea {
+  width: 100%;
+}
+
+footer {
+  background-color: #1df8b2;
+  background-image: linear-gradient(225deg, #1df8b2 0%, #005899 46%, #1df8b2 100%);
+  text-align: center;
+  color: #fff;
+  font-family: "DynaPuff", cursive;
+  padding: 20px;
+}
+
+.redes {
+  font-size: 30px;
+  letter-spacing: 6px;
+}
+
+@media only screen and (min-widht: 320px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
