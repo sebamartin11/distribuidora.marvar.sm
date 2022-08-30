@@ -10,6 +10,7 @@ $color3: #2bdca4db;
 $color4: #fff;
 $color5: #000;
 $color6: #333;
+$color7: #0066ff;
 $font1: cursive;
 $font2: 'DynaPuff';
 $ancho: 100%;
@@ -20,6 +21,7 @@ body{
         background-color: $color2;
         text-align: center;
         color: $color1;
+        font-size: 45px;
         padding: 10px;
         margin: 0;
     }
@@ -42,29 +44,37 @@ body{
 }
 // jumbotron 
 .jumbotron{
-    background-image: url(./img/fondo.webp);
+    background-image: url(./img/fondo2.jpg);
     background-size: cover;
     background-position: top;
-    color: $color2 !important;
+    background-repeat: no-repeat;
+    color: $color1;
     border-radius: 0;
     font-weight: bold;
     margin: 0;
-    text-shadow: 0 0 2px $color5;
+    text-shadow: 0 0 10px $color5;
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 30px;
+    }
 }
 // css botones
 .btn-primary{
     background-color: $color2;
     margin: 2vh;
+    color: $color1;
 }
 .btn-primary:hover{
-    background-color: $color3;
+    background-color: $color7;
 }
 // css aside izq
 .al{
     background-image: url(./img/camionmarvar.png);
     background-size: cover;
     background-position: center;
-    height: 120vh;
+    height: 100vh;
     width: $ancho;
 }
 // css aside der 
@@ -74,22 +84,43 @@ body{
     h3{
         text-align: center;
         color: $color2;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    p::selection{
+        color: $color2;
+        background-color: $color1;
     }
 }
-// parrafo aside 
-p::selection{
-    color:$color2;
-    background-color: $color1;
-}
 // hover img
+.card{
+    background-color: #1df8b2;
+    h4{
+        color: $color2;
+        font-weight: bold;
+        font-size: 35px;
+    }
+    p{
+        color: $color2;
+        font-weight: bold;
+        font-size: 25px;
+    }
+}
 .card:hover{
     transform: scale(1.1);
     transition: all 0.8s;
 }
+// .card-text{
+//     color: $color2;
+//     font-weight: bold;
+// }
 // aside left contactos.html
 .alcon{
     width: $ancho;
-    height: 100%;
     content: url(../assets/img/contacto.jpg);
     background-position: center;
     background-size: cover;
@@ -128,6 +159,10 @@ footer{
 @media only screen and (min-widht:320px){
     body{
         grid-template-columns: 1fr;
+    }
+    .al{
+        width: $ancho;
+        height: 50vh;
     }
     footer{
         grid-template-columns: 1fr;

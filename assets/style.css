@@ -11,6 +11,7 @@ body h2 {
   background-color: #005899;
   text-align: center;
   color: #1df8b2;
+  font-size: 45px;
   padding: 10px;
   margin: 0;
 }
@@ -35,30 +36,38 @@ body h2 {
 }
 
 .jumbotron {
-  background-image: url(./img/fondo.webp);
+  background-image: url(./img/fondo2.jpg);
   background-size: cover;
   background-position: top;
-  color: #005899 !important;
+  background-repeat: no-repeat;
+  color: #1df8b2;
   border-radius: 0;
   font-weight: bold;
   margin: 0;
-  text-shadow: 0 0 2px #000;
+  text-shadow: 0 0 10px #000;
+}
+.jumbotron h1 {
+  font-size: 50px;
+}
+.jumbotron p {
+  font-size: 30px;
 }
 
 .btn-primary {
   background-color: #005899;
   margin: 2vh;
+  color: #1df8b2;
 }
 
 .btn-primary:hover {
-  background-color: rgba(43, 220, 164, 0.8588235294);
+  background-color: #0066ff;
 }
 
 .al {
   background-image: url(./img/camionmarvar.png);
   background-size: cover;
   background-position: center;
-  height: 120vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -69,11 +78,34 @@ body h2 {
 .ar h3 {
   text-align: center;
   color: #005899;
+  font-size: 30px;
+  font-weight: bold;
 }
-
-p::selection {
+.ar p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.ar p::-moz-selection {
   color: #005899;
   background-color: #1df8b2;
+}
+.ar p::selection {
+  color: #005899;
+  background-color: #1df8b2;
+}
+
+.card {
+  background-color: #1df8b2;
+}
+.card h4 {
+  color: #005899;
+  font-weight: bold;
+  font-size: 35px;
+}
+.card p {
+  color: #005899;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .card:hover {
@@ -83,7 +115,6 @@ p::selection {
 
 .alcon {
   width: 100%;
-  height: 100%;
   content: url(../assets/img/contacto.jpg);
   background-position: center;
   background-size: cover;
@@ -125,9 +156,11 @@ footer {
   body {
     grid-template-columns: 1fr;
   }
+  .al {
+    width: 100%;
+    height: 50vh;
+  }
   footer {
     grid-template-columns: 1fr;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
