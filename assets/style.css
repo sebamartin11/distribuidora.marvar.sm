@@ -23,20 +23,27 @@ body h2 {
 .nav-link {
   color: #1df8b2 !important;
   text-shadow: 0 0 5px #333;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.navbar-brand::before {
+h1::before {
   content: url(./img/logomarvarsnacks.png);
 }
 
 .navbar-brand {
+  font-size: 20px;
   font-weight: bold;
   color: #1df8b2 !important;
   text-shadow: 0 0 5px #000;
 }
 
+.navbar-dark {
+  background-color: #005899;
+}
+
 .jumbotron {
-  background-image: url(./img/fondo2.jpg);
+  background-image: url(./img/fondo.png);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -50,7 +57,7 @@ body h2 {
   font-size: 50px;
 }
 .jumbotron p {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .btn-primary {
@@ -58,8 +65,7 @@ body h2 {
   margin: 2vh;
   color: #1df8b2;
 }
-
-.btn-primary:hover {
+.btn-primary .btn-primary:hover {
   background-color: #0066ff;
 }
 
@@ -67,7 +73,8 @@ body h2 {
   background-image: url(./img/camionmarvar.png);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  background-repeat: no-repeat;
+  height: 120vh;
   width: 100%;
 }
 
@@ -77,12 +84,9 @@ body h2 {
 }
 .ar h3 {
   text-align: center;
-  color: #005899;
-  font-size: 30px;
   font-weight: bold;
 }
 .ar p {
-  font-size: 20px;
   font-weight: bold;
 }
 .ar p::-moz-selection {
@@ -97,23 +101,17 @@ body h2 {
 .card {
   background-color: #1df8b2;
 }
-.card h4 {
-  color: #005899;
-  font-weight: bold;
-  font-size: 35px;
-}
-.card p {
-  color: #005899;
-  font-weight: bold;
-  font-size: 25px;
-}
 
-.card:hover {
+img:hover {
   transform: scale(1.1);
   transition: all 0.8s;
 }
 
-.alcon {
+.logos {
+  width: 100%;
+}
+
+.alcon, .alser {
   width: 100%;
   content: url(../assets/img/contacto.jpg);
   background-position: center;
@@ -121,11 +119,15 @@ body h2 {
   padding: 0;
 }
 
-.arcon {
+.arcon, .arser {
   text-align: center;
   color: #005899;
   font-weight: bold;
   font-size: 25px;
+}
+
+.form-is {
+  padding: 20%;
 }
 
 .form-group {
@@ -134,21 +136,23 @@ body h2 {
   font-size: 20px;
 }
 
-textarea {
-  width: 100%;
+.form-control {
+  width: 120%;
 }
 
 footer {
   background-color: #1df8b2;
   background-image: linear-gradient(225deg, #1df8b2 0%, #005899 46%, #1df8b2 100%);
   text-align: center;
-  color: #fff;
+  color: #1df8b2;
+  font-size: 35px;
   font-family: "DynaPuff", cursive;
   padding: 20px;
 }
 
 .redes {
-  font-size: 30px;
+  font-size: 45px;
+  font-weight: bold;
   letter-spacing: 6px;
 }
 
@@ -157,10 +161,74 @@ footer {
     grid-template-columns: 1fr;
   }
   .al {
+    height: 70vh;
     width: 100%;
-    height: 50vh;
+  }
+  .logos {
+    height: 100%;
+    width: 100%;
+  }
+  form {
+    padding: 10%;
+  }
+  .form-control {
+    width: 110%;
   }
   footer {
     grid-template-columns: 1fr;
   }
+}
+@media only screen and (min-widht: 992px) {
+  .al {
+    height: 80vh;
+    width: 100%;
+  }
+  form {
+    padding: 20%;
+  }
+  .form-control {
+    width: 110%;
+  }
+  textarea {
+    width: 100%;
+  }
+}
+.text--16px {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+}
+
+.text--20px {
+  text-align: center;
+  font-size: 20px;
+  color: orange;
+  font-weight: bold;
+}
+
+.text--25px {
+  text-align: center;
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
+}
+
+.text--30px {
+  text-align: center;
+  font-size: 30px;
+  color: purple;
+  font-weight: bold;
+}
+
+.text--35px {
+  text-align: center;
+  font-size: 35px;
+  color: blue;
+  font-weight: bold;
+}
+
+.alser {
+  content: url(../assets/img/servicios.jpg);
+  height: 120vh;
 }/*# sourceMappingURL=style.css.map */

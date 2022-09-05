@@ -13,6 +13,12 @@ $color6: #333;
 $color7: #0066ff;
 $font1: cursive;
 $font2: 'DynaPuff';
+$size1: 50px;
+$size2: 45px;
+$size3: 35px;
+$size4: 30px;
+$size5: 25px;
+$size6: 20px;
 $ancho: 100%;
 // css body
 body{
@@ -21,7 +27,7 @@ body{
         background-color: $color2;
         text-align: center;
         color: $color1;
-        font-size: 45px;
+        font-size: $size2;
         padding: 10px;
         margin: 0;
     }
@@ -33,18 +39,24 @@ body{
 .nav-link{
     color: $color1 !important;
     text-shadow: 0 0 5px $color6;
+    font-size: 20px;
+    font-weight: 500;
 }
-.navbar-brand::before{
+h1::before{
     content: url(./img/logomarvarsnacks.png);
 }
 .navbar-brand{
+    font-size: 20px;
     font-weight: bold;
     color: $color1 !important;
     text-shadow: 0 0 5px $color5;
 }
+.navbar-dark{
+    background-color: $color2;
+}
 // jumbotron 
 .jumbotron{
-    background-image: url(./img/fondo2.jpg);
+    background-image: url(./img/fondo.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -54,10 +66,10 @@ body{
     margin: 0;
     text-shadow: 0 0 10px $color5;
     h1{
-        font-size: 50px;
+        font-size: $size1;
     }
     p{
-        font-size: 30px;
+        font-size: $size6;
     }
 }
 // css botones
@@ -65,15 +77,16 @@ body{
     background-color: $color2;
     margin: 2vh;
     color: $color1;
-}
-.btn-primary:hover{
-    background-color: $color7;
+    .btn-primary:hover{
+        background-color: $color7;
+    }
 }
 // css aside izq
 .al{
     background-image: url(./img/camionmarvar.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 120vh;
     width: $ancho;
 }
@@ -83,12 +96,12 @@ body{
     font-weight: 600;
     h3{
         text-align: center;
-        color: $color2;
-        font-size: 30px;
+        // color: $color2;
+        // font-size: $size3;
         font-weight: bold;
     }
     p{
-        font-size: 20px;
+        // font-size: $size6;
         font-weight: bold;
     }
     p::selection{
@@ -96,28 +109,31 @@ body{
         background-color: $color1;
     }
 }
-// hover img
+// card img
 .card{
-    background-color: #1df8b2;
-    h4{
-        color: $color2;
-        font-weight: bold;
-        font-size: 35px;
-    }
-    p{
-        color: $color2;
-        font-weight: bold;
-        font-size: 25px;
-    }
+    background-color: $color1;
+    // h4{
+    //     // color: $color2;
+    //     // font-weight: bold;
+    //     // font-size: $size3;
+    // }
+    // p{
+    //     // color: $color2;
+    //     // font-weight: bold;
+    //     // font-size: $size5;
+    // }
 }
-.card:hover{
+img:hover{
     transform: scale(1.1);
     transition: all 0.8s;
 }
-// .card-text{
-//     color: $color2;
-//     font-weight: bold;
-// }
+
+// logos
+.logos{
+    // height: 70%;
+    width: $ancho;
+}
+
 // aside left contactos.html
 .alcon{
     width: $ancho;
@@ -130,41 +146,97 @@ body{
     text-align: center;
     color: $color2;
     font-weight: bold;
-    font-size: 25px;
+    font-size: $size5;
 }
 // form iniciar sesion
+.form-is{
+    padding: 20%;
+}
 .form-group{
     color: $color2;
     font-weight: bold;
-    font-size: 20px;
+    font-size: $size6;
 }
-textarea{
-    width: $ancho;
+.form-control{
+    width: 120%;
 }
 // css footer 
 footer{
     background-color: $color1;
     background-image: linear-gradient(225deg, #1df8b2 0%, #005899 46%, #1df8b2 100%);
     text-align: center;    
-    color: $color4;
+    color: $color1;
+    font-size: $size3;
     font-family: $font2, $font1;
-    padding: 20px;
+    padding: $size6;
 }
 // css redes
 .redes{
-    font-size: 30px;
+    font-size: $size2;
+    font-weight: bold;
     letter-spacing: 6px;
 }
-// Media query
+// media query
 @media only screen and (min-widht:320px){
     body{
         grid-template-columns: 1fr;
     }
     .al{
+        height: 70vh;
         width: $ancho;
-        height: 50vh;
+    }
+    .logos{
+        height: 100%;
+        width: $ancho;
+    }
+    form{ 
+        padding: 10%;
+    }
+    .form-control{
+        width: 110%;
     }
     footer{
         grid-template-columns: 1fr;
     }
+}
+@media only screen and (min-widht:992px){
+    .al{
+        height: 80vh;
+        width: $ancho;
+    }
+    form{
+        padding: 20%;
+    }
+    .form-control{
+        width: 110%;
+    }
+    textarea{
+        width: $ancho;
+    }
+}
+// maps
+$colores: (
+    16px: red,
+    20px: orange,
+    25px: green,
+    30px: purple,
+    35px: blue
+
+    );
+    @each $size, $color in $colores {
+        .text--#{$size} {
+            text-align: center;
+            font-size: $size;
+            color: $color;
+            font-weight: bold;
+        }
+    }
+    //extends 
+.alser{
+    @extend .alcon;
+    content: url(../assets/img/servicios.jpg);
+    height: 120vh;
+}
+.arser{
+    @extend .arcon;
 }
