@@ -57,14 +57,14 @@
         <div class="jumbotron">
             <h1>Distribuidora Marvar</h1>
             <p>Distribuidora de alimentos</p>
-            <button type="button" class="btn btn-primary">Mas info</button>
+            <a href="./productos.html"><button type="button" class="btn btn-primary">Nuestros Productos</button></a>
         </div>
         <!-- jumbotron Fin -->
         <!-- Formulario Inciar Sesion INICIA-->
         <h2>Login</h2>
-        <section class="container-fluid col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <section class="container-fluid col-sm-8 col-md-8 col-lg-8 col-xl-8">
             <div class="rowsection form-is">
-                <form action="/action_page.php">
+                <form action="/action_page.php" name="iniciosesion" method="post" netlify>
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" placeholder="tunombre@email.com" id="email">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="form-group form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox">Recuerdame
+                        <input class="form-check-input" type="checkbox">Recuerdame
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
@@ -88,17 +88,16 @@
     <!-- footer inicia -->
     <footer>
         <div>
-            <p>Todos los derechos reservados por Copyright</p>
+            <p>Copyright © Marvarsnacks </p>
             <p>Desarrollado por Sebastian Martin</p>
             <div class="redes">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-            </div>
+                <a href="https://api.whatsapp.com/send?phone=1130739567"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>         
         </div>
     </footer>
     <!-- footer fin -->
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

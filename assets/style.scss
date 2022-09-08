@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Baloo+Bhaijaan+2:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -28,6 +29,7 @@ body{
         text-align: center;
         color: $color1;
         font-size: $size2;
+        font-family: 'Amaranth', sans-serif;
         padding: 10px;
         margin: 0;
     }
@@ -39,15 +41,18 @@ body{
 .nav-link{
     color: $color1 !important;
     text-shadow: 0 0 5px $color6;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
+    font-family: 'Amaranth', sans-serif;
 }
+
 h1::before{
     content: url(./img/logomarvarsnacks.png);
 }
 .navbar-brand{
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Amaranth', sans-serif;
     color: $color1 !important;
     text-shadow: 0 0 5px $color5;
 }
@@ -67,98 +72,167 @@ h1::before{
     text-shadow: 0 0 10px $color5;
     h1{
         font-size: $size1;
+        font-family: 'Amaranth', sans-serif;
     }
     p{
-        font-size: $size6;
+        font-size: $size3;
+        font-family: 'Amaranth', sans-serif;
     }
 }
 // css botones
 .btn-primary{
     background-color: $color2;
-    margin: 2vh;
+    margin: 1vh;
     color: $color1;
+    font-size: $size6;
+    font-family: 'Amaranth', sans-serif;
     .btn-primary:hover{
         background-color: $color7;
     }
 }
 // css aside izq
 .al{
-    background-image: url(./img/camionmarvar.png);
+    padding: 0%;
+    content: url(../assets/img/camionmarvar.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 120vh;
     width: $ancho;
+    height: 100%;
 }
 // css aside der 
 .ar{
     color: $color2;
-    font-weight: 600;
     h3{
         text-align: center;
-        // color: $color2;
-        // font-size: $size3;
+        color: $color2;
+        font-size: $size3;
         font-weight: bold;
+        font-family: 'Amaranth', sans-serif;
     }
     p{
-        // font-size: $size6;
+        font-size: $size6;
         font-weight: bold;
+        text-align: center;
+        font-family: 'Amaranth', sans-serif;
     }
     p::selection{
         color: $color2;
-        background-color: $color1;
+        background-color: $color4;
     }
 }
 // card img
 .card{
     background-color: $color1;
-    // h4{
-    //     // color: $color2;
-    //     // font-weight: bold;
-    //     // font-size: $size3;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    // border: solid 3px $color2;
+    h4{
+        color: $color2;
+        font-weight: 700;
+        font-size: $size3;
+        text-align: center;
+        font-family: 'Amaranth', sans-serif;
+    }
+    p{
+        color: $color2;
+        font-weight: 500;
+        font-size: $size4;
+        text-align: center;
+        font-family: 'Amaranth', sans-serif;
+    }
+    .foto{
+        height: 70%;
+        width: 100%;
+    }
+    .natura{
+        height: 80vh;
+        width: 55%;
+        display: flex;
+        align-self: center;
+    }
+    img:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
+    }
+    .logos{
+        height: 55vh;
+        width: $ancho;
+        // border: 4px $color2 solid;
+    }
+    // .btn{
+    //     border-bottom: black;
     // }
-    // p{
-    //     // color: $color2;
-    //     // font-weight: bold;
-    //     // font-size: $size5;
-    // }
-}
-img:hover{
-    transform: scale(1.1);
-    transition: all 0.8s;
 }
 
-// logos
-.logos{
-    // height: 70%;
-    width: $ancho;
-}
 
 // aside left contactos.html
 .alcon{
-    width: $ancho;
+    padding: 0%;
     content: url(../assets/img/contacto.jpg);
+    width: $ancho;
     background-position: center;
     background-size: cover;
-    padding: 0;
 }
 .arcon{
-    text-align: center;
     color: $color2;
     font-weight: bold;
-    font-size: $size5;
+    font-size: $size4;
+    h3{
+        text-align: center;
+        font-family: 'Amaranth', sans-serif;
+        font-weight: bold;
+        font-size: $size3;
+    }
+    p{
+        text-align: center;
+        font-family: 'Amaranth', sans-serif;
+        font-size: $size4;
+    }
 }
+.form-contacto{
+    margin: 50px;
+    font-size: $size6;
+    .form-control{
+        width: 100%;
+    }
+    textarea{
+        width: $ancho;
+    }
+}
+// ubicacion
+.ubicacion{
+    margin: -0.5%;
+}
+.map{
+    width: $ancho;
+    height: 50vh;
+    margin: 0%;
+}
+    //extends 
+.alser{
+    padding: 0%;
+    content: url(./img/servicios.jpg);
+        width: $ancho;
+        background-position: center;
+        background-size: cover;
+    }
+.arser{
+    @extend .arcon;
+    }
 // form iniciar sesion
 .form-is{
-    padding: 20%;
+    padding: 10%;
 }
 .form-group{
     color: $color2;
     font-weight: bold;
-    font-size: $size6;
+    font-family: 'Amaranth', sans-serif;
+    font-size: $size4;
 }
 .form-control{
-    width: 120%;
+    width: 80%;
 }
 // css footer 
 footer{
@@ -167,76 +241,114 @@ footer{
     text-align: center;    
     color: $color1;
     font-size: $size3;
-    font-family: $font2, $font1;
+    font-family: 'Amaranth', sans-serif;
     padding: $size6;
+    // margin: -0.5%;
 }
 // css redes
 .redes{
     font-size: $size2;
     font-weight: bold;
     letter-spacing: 6px;
+    a{
+        color: #1df8b2;
+    }
+    a:hover{
+        color: #0008ff;
+    }
 }
 // media query
-@media only screen and (min-widht:320px){
+@media only screen and (max-widht:320px){
     body{
         grid-template-columns: 1fr;
-    }
-    .al{
-        height: 70vh;
-        width: $ancho;
     }
     .logos{
         height: 100%;
         width: $ancho;
     }
+    // .ubicacion{
+    //     margin: -1.8%;
+    // }
     form{ 
         padding: 10%;
     }
-    .form-control{
-        width: 110%;
+    textarea{
+        width: $ancho;
     }
     footer{
         grid-template-columns: 1fr;
+        
     }
 }
-@media only screen and (min-widht:992px){
+@media only screen and (min-widht: 576px){
     .al{
-        height: 80vh;
-        width: $ancho;
+        width: 60vh;
     }
+    textarea{
+        width: 50%;
+    }
+}
+@media only screen and (max-widht: 768px){
+    .nav-link{
+        display: flex;
+        flex-direction: column;
+    }
+    .al{
+        width: 40vh;
+    }
+    textarea{
+        width: 50%;
+    }
+}
+@media only screen and (min-widht: 992px) {
+    .al{
+        img{
+            height: 115vh !important;
+            width: $ancho;
+        }
+    }
+    .card{
+        img{
+            width: $ancho;
+            height: 40vh;
+        }
+    }
+
     form{
         padding: 20%;
     }
     .form-control{
-        width: 110%;
+        width: 70%;
     }
     textarea{
         width: $ancho;
     }
 }
-// maps
-$colores: (
-    16px: red,
-    20px: orange,
-    25px: green,
-    30px: purple,
-    35px: blue
-
-    );
-    @each $size, $color in $colores {
-        .text--#{$size} {
-            text-align: center;
-            font-size: $size;
-            color: $color;
-            font-weight: bold;
-        }
+@media only screen and (max-widht: 1200px){
+    .al{
+        height: 100%;
     }
-    //extends 
-.alser{
-    @extend .alcon;
-    content: url(../assets/img/servicios.jpg);
-    height: 120vh;
+    .alcon{
+        height: 100%;
+    }
+    .text-cont{
+        width: 10%
+    }
 }
-.arser{
-    @extend .arcon;
-}
+// // maps
+// $colores: (
+//     16px: red,
+//     20px: orange,
+//     25px: green,
+//     30px: purple,
+//     35px: blue
+
+//     );
+//     @each $size, $color in $colores {
+//         .text--#{$size} {
+//             text-align: center;
+//             font-size: $size;
+//             color: $color;
+//             font-weight: bold;
+//         }
+//     }

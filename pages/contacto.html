@@ -58,22 +58,21 @@
         <div class="jumbotron">
             <h1>Distribuidora Marvar</h1>
             <p>Distribuidora de alimentos</p>
-            <button type="button" class="btn btn-primary">Mas info</button>
+            <a href="./productos.html"><button type="button" class="btn btn-primary">Nuestros Productos</button></a>
         </div>
         <!-- jumbotron Fin -->
         <!-- section contactos -->
         <h2>Contacto</h2>
         <section class="container-fluid">
             <div class="row">
-                <aside class="col-sm-12 col-md-12 col-lg-6 col-xl-6 alcon">
-                </aside>
+                <aside class="col-sm-12 col-md-12 col-lg-6 col-xl-6 alcon"></aside>
                 <aside class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="arcon">
                         <h3><u>Atención al cliente</u></h2>
                         <p>Completá el siguiente formulario.</p>
                         <p>¡Te responderemos lo antes posible!</p>
                     </div>     
-                    <form action="/action_page.php" class="was-validated">
+                    <form action="/action_page.php" name="miform" method="post" netlify class="was-validated form-contacto">
                         <div class="form-group">
                             <label for="uname">Nombre:</label>
                             <input type="text" class="form-control" id="uname" placeholder="Nombre" name="nombre"required>
@@ -103,7 +102,7 @@
                         </div>
                         <div class="form-group">
                             <label for="mensaje">Mensaje:</label> <br>
-                            <textarea name="comentarios" id="comentarios" cols="50"rows="5" required placeholder="Dejanos su mensaje"></textarea>
+                            <textarea class="text-cont" name="comentarios" id="comentarios" cols="50"rows="5" required placeholder="Dejanos su mensaje"></textarea>
                         </div>
                         <div class="form-group form-check">
                             <label class="form-check-label">
@@ -127,17 +126,16 @@
     <!-- footer inicia -->
     <footer>
         <div>
-            <p>Todos los derechos reservados por Copyright</p>
+            <p>Copyright © Marvarsnacks </p>
             <p>Desarrollado por Sebastian Martin</p>
             <div class="redes">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-            </div>
+                <a href="https://api.whatsapp.com/send?phone=1130739567"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>         
         </div>
     </footer>
     <!-- footer fin -->
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

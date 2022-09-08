@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Baloo+Bhaijaan+2:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body h2 {
   text-align: center;
   color: #1df8b2;
   font-size: 45px;
+  font-family: "Amaranth", sans-serif;
   padding: 10px;
   margin: 0;
 }
@@ -23,8 +25,9 @@ body h2 {
 .nav-link {
   color: #1df8b2 !important;
   text-shadow: 0 0 5px #333;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
+  font-family: "Amaranth", sans-serif;
 }
 
 h1::before {
@@ -34,6 +37,7 @@ h1::before {
 .navbar-brand {
   font-size: 20px;
   font-weight: bold;
+  font-family: "Amaranth", sans-serif;
   color: #1df8b2 !important;
   text-shadow: 0 0 5px #000;
 }
@@ -55,89 +59,165 @@ h1::before {
 }
 .jumbotron h1 {
   font-size: 50px;
+  font-family: "Amaranth", sans-serif;
 }
 .jumbotron p {
-  font-size: 20px;
+  font-size: 35px;
+  font-family: "Amaranth", sans-serif;
 }
 
 .btn-primary {
   background-color: #005899;
-  margin: 2vh;
+  margin: 1vh;
   color: #1df8b2;
+  font-size: 20px;
+  font-family: "Amaranth", sans-serif;
 }
 .btn-primary .btn-primary:hover {
   background-color: #0066ff;
 }
 
 .al {
-  background-image: url(./img/camionmarvar.png);
+  padding: 0%;
+  content: url(../assets/img/camionmarvar.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 120vh;
   width: 100%;
+  height: 100%;
 }
 
 .ar {
   color: #005899;
-  font-weight: 600;
 }
 .ar h3 {
   text-align: center;
+  color: #005899;
+  font-size: 35px;
   font-weight: bold;
+  font-family: "Amaranth", sans-serif;
 }
 .ar p {
+  font-size: 20px;
   font-weight: bold;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
 }
 .ar p::-moz-selection {
   color: #005899;
-  background-color: #1df8b2;
+  background-color: #fff;
 }
 .ar p::selection {
   color: #005899;
-  background-color: #1df8b2;
+  background-color: #fff;
 }
 
 .card {
   background-color: #1df8b2;
+  margin: 0%;
+  padding: 0%;
+  text-align: center;
 }
-
-img:hover {
+.card h4 {
+  color: #005899;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+}
+.card p {
+  color: #005899;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+}
+.card .foto {
+  height: 70%;
+  width: 100%;
+}
+.card .natura {
+  height: 80vh;
+  width: 55%;
+  display: flex;
+  align-self: center;
+}
+.card img:hover {
   transform: scale(1.1);
   transition: all 0.8s;
 }
-
-.logos {
+.card .logos {
+  height: 55vh;
   width: 100%;
 }
 
-.alcon, .alser {
-  width: 100%;
+.alcon {
+  padding: 0%;
   content: url(../assets/img/contacto.jpg);
+  width: 100%;
   background-position: center;
   background-size: cover;
-  padding: 0;
 }
 
 .arcon, .arser {
-  text-align: center;
   color: #005899;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
+}
+.arcon h3, .arser h3 {
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+.arcon p, .arser p {
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
+}
+
+.form-contacto {
+  margin: 50px;
+  font-size: 20px;
+}
+.form-contacto .form-control {
+  width: 100%;
+}
+.form-contacto textarea {
+  width: 100%;
+}
+
+.ubicacion {
+  margin: -0.5%;
+}
+
+.map {
+  width: 100%;
+  height: 50vh;
+  margin: 0%;
+}
+
+.alser {
+  padding: 0%;
+  content: url(./img/servicios.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .form-is {
-  padding: 20%;
+  padding: 10%;
 }
 
 .form-group {
   color: #005899;
   font-weight: bold;
-  font-size: 20px;
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
 }
 
 .form-control {
-  width: 120%;
+  width: 80%;
 }
 
 footer {
@@ -146,7 +226,7 @@ footer {
   text-align: center;
   color: #1df8b2;
   font-size: 35px;
-  font-family: "DynaPuff", cursive;
+  font-family: "Amaranth", sans-serif;
   padding: 20px;
 }
 
@@ -155,14 +235,16 @@ footer {
   font-weight: bold;
   letter-spacing: 6px;
 }
+.redes a {
+  color: #1df8b2;
+}
+.redes a:hover {
+  color: #0008ff;
+}
 
-@media only screen and (min-widht: 320px) {
+@media only screen and (max-widht: 320px) {
   body {
     grid-template-columns: 1fr;
-  }
-  .al {
-    height: 70vh;
-    width: 100%;
   }
   .logos {
     height: 100%;
@@ -171,64 +253,60 @@ footer {
   form {
     padding: 10%;
   }
-  .form-control {
-    width: 110%;
+  textarea {
+    width: 100%;
   }
   footer {
     grid-template-columns: 1fr;
   }
 }
-@media only screen and (min-widht: 992px) {
+@media only screen and (min-widht: 576px) {
   .al {
-    height: 80vh;
+    width: 60vh;
+  }
+  textarea {
+    width: 50%;
+  }
+}
+@media only screen and (max-widht: 768px) {
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .al {
+    width: 40vh;
+  }
+  textarea {
+    width: 50%;
+  }
+}
+@media only screen and (min-widht: 992px) {
+  .al img {
+    height: 115vh !important;
     width: 100%;
+  }
+  .card img {
+    width: 100%;
+    height: 40vh;
   }
   form {
     padding: 20%;
   }
   .form-control {
-    width: 110%;
+    width: 70%;
   }
   textarea {
     width: 100%;
   }
 }
-.text--16px {
-  text-align: center;
-  font-size: 16px;
-  color: red;
-  font-weight: bold;
-}
-
-.text--20px {
-  text-align: center;
-  font-size: 20px;
-  color: orange;
-  font-weight: bold;
-}
-
-.text--25px {
-  text-align: center;
-  font-size: 25px;
-  color: green;
-  font-weight: bold;
-}
-
-.text--30px {
-  text-align: center;
-  font-size: 30px;
-  color: purple;
-  font-weight: bold;
-}
-
-.text--35px {
-  text-align: center;
-  font-size: 35px;
-  color: blue;
-  font-weight: bold;
-}
-
-.alser {
-  content: url(../assets/img/servicios.jpg);
-  height: 120vh;
+@media only screen and (max-widht: 1200px) {
+  .al {
+    height: 100%;
+  }
+  .alcon {
+    height: 100%;
+  }
+  .text-cont {
+    width: 10%;
+  }
 }/*# sourceMappingURL=style.css.map */
