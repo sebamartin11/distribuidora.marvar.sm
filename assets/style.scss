@@ -147,8 +147,8 @@ h1::before{
         width: 100%;
     }
     .natura{
-        height: 80vh;
-        width: 55%;
+        height: 40vh;
+        width: auto;
         display: flex;
         align-self: center;
     }
@@ -196,6 +196,7 @@ h1::before{
     font-size: $size6;
     .form-control{
         width: 100%;
+        color: $color2;
     }
     textarea{
         width: $ancho;
