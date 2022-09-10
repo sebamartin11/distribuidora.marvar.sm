@@ -124,10 +124,8 @@ h1::before{
 // card img
 .card{
     background-color: $color1;
-    margin: 0%;
     padding: 0%;
     text-align: center;
-    // border: solid 3px $color2;
     h4{
         color: $color2;
         font-weight: 700;
@@ -142,9 +140,12 @@ h1::before{
         text-align: center;
         font-family: 'Amaranth', sans-serif;
     }
-    .foto{
-        height: 70%;
-        width: 100%;
+    .krach{
+        margin: 10px;
+        // height: auto;
+        width: 43vh;
+        display: flex;
+        align-self: center;
     }
     .natura{
         height: 40vh;
@@ -157,15 +158,10 @@ h1::before{
         transition: all 0.8s;
     }
     .logos{
-        height: 55vh;
+        height: 58vh;
         width: $ancho;
-        // border: 4px $color2 solid;
     }
-    // .btn{
-    //     border-bottom: black;
-    // }
 }
-
 
 // aside left contactos.html
 .alcon{
@@ -202,10 +198,7 @@ h1::before{
         width: $ancho;
     }
 }
-// ubicacion
-.ubicacion{
-    margin: -0.5%;
-}
+
 .map{
     width: $ancho;
     height: 50vh;
@@ -258,84 +251,7 @@ footer{
         color: #0008ff;
     }
 }
-// media query
-@media only screen and (max-widht:320px){
-    body{
-        grid-template-columns: 1fr;
-    }
-    .logos{
-        height: 100%;
-        width: $ancho;
-    }
-    // .ubicacion{
-    //     margin: -1.8%;
-    // }
-    form{ 
-        padding: 10%;
-    }
-    textarea{
-        width: $ancho;
-    }
-    footer{
-        grid-template-columns: 1fr;
-        
-    }
-}
-@media only screen and (min-widht: 576px){
-    .al{
-        width: 60vh;
-    }
-    textarea{
-        width: 50%;
-    }
-}
-@media only screen and (max-widht: 768px){
-    .nav-link{
-        display: flex;
-        flex-direction: column;
-    }
-    .al{
-        width: 40vh;
-    }
-    textarea{
-        width: 50%;
-    }
-}
-@media only screen and (min-widht: 992px) {
-    .al{
-        img{
-            height: 115vh !important;
-            width: $ancho;
-        }
-    }
-    .card{
-        img{
-            width: $ancho;
-            height: 40vh;
-        }
-    }
 
-    form{
-        padding: 20%;
-    }
-    .form-control{
-        width: 70%;
-    }
-    textarea{
-        width: $ancho;
-    }
-}
-@media only screen and (max-widht: 1200px){
-    .al{
-        height: 100%;
-    }
-    .alcon{
-        height: 100%;
-    }
-    .text-cont{
-        width: 10%
-    }
-}
 // // maps
 // $colores: (
 //     16px: red,
