@@ -1,25 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Baloo+Bhaijaan+2:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #1df8b2;
 }
-body h2 {
+body h2, body .alcon .ubicacion h3, .alcon .ubicacion body h3 {
   background-color: #005899;
   text-align: center;
   color: #1df8b2;
   font-size: 45px;
   font-family: "Amaranth", sans-serif;
   padding: 10px;
-  margin: 0;
+  margin: 0px;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #005899;
+  height: 300px;
+  border-radius: 5px;
 }
 
 .bgnav {
   background-color: #005899;
+  background-image: linear-gradient(45deg, #005899 0%, #005899 33%, #005899 66%, #1df8b2 100%);
 }
 
 .nav-link {
@@ -77,6 +91,10 @@ h1::before {
   background-color: #0066ff;
 }
 
+.container-fluid {
+  overflow: hidden;
+}
+
 .al {
   padding: 0%;
   content: url(../assets/img/camionmarvar.png);
@@ -105,11 +123,71 @@ h1::before {
 }
 .ar p::-moz-selection {
   color: #005899;
-  background-color: #fff;
+  background-color: #000;
 }
 .ar p::selection {
   color: #005899;
-  background-color: #fff;
+  background-color: #000;
+}
+
+h1::-moz-selection {
+  color: #1df8b2;
+  background-color: #000;
+}
+
+h1::selection {
+  color: #1df8b2;
+  background-color: #000;
+}
+
+h2::-moz-selection, .alcon .ubicacion h3::-moz-selection {
+  color: #1df8b2;
+  background-color: #000;
+}
+
+h2::selection, .alcon .ubicacion h3::selection {
+  color: #1df8b2;
+  background-color: #000;
+}
+
+h3::-moz-selection {
+  color: #1df8b2;
+  background-color: #000;
+}
+
+h3::selection {
+  color: #1df8b2;
+  background-color: #000;
+}
+
+h4::-moz-selection {
+  color: #005899;
+  background-color: #000;
+}
+
+h4::selection {
+  color: #005899;
+  background-color: #000;
+}
+
+label::-moz-selection {
+  color: #005899;
+  background-color: #000;
+}
+
+label::selection {
+  color: #005899;
+  background-color: #000;
+}
+
+p::-moz-selection {
+  color: #005899;
+  background-color: #000;
+}
+
+p::selection {
+  color: #005899;
+  background-color: #000;
 }
 
 .card {
@@ -119,51 +197,117 @@ h1::before {
 }
 .card h4 {
   color: #005899;
-  font-weight: 700;
-  font-size: 35px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   font-family: "Amaranth", sans-serif;
 }
 .card p {
   color: #005899;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-family: "Amaranth", sans-serif;
 }
 .card .krach {
-  margin: 10px;
-  width: 43vh;
+  padding: 5vh;
+  height: 60vh;
+  width: auto;
   display: flex;
   align-self: center;
 }
+.card .krach:hover {
+  transform: rotateZ(20deg);
+  transition: all 0.8s;
+}
+.card .hispanos:hover {
+  transform: rotateZ(20deg);
+  transition: all 0.8s;
+}
+.card .macritas:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
+}
+.card .arrocitas:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
+}
 .card .natura {
+  padding: 20px;
   height: 40vh;
   width: auto;
   display: flex;
   align-self: center;
 }
-.card img:hover {
-  transform: scale(1.1);
+.card .natura:hover {
+  transform: rotateZ(20deg);
   transition: all 0.8s;
 }
 .card .logos {
-  height: 58vh;
+  height: 50vh;
   width: 100%;
+  -webkit-animation: rebotar;
+          animation: rebotar;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+@-webkit-keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
+}
+@keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
+}
+.card button {
+  display: inline-block;
 }
 
 .alcon {
-  padding: 0%;
-  content: url(../assets/img/contacto.jpg);
+  padding: 0px;
+}
+.alcon .contacto {
+  padding: 0px;
   width: 100%;
+  height: 40em;
   background-position: center;
   background-size: cover;
+}
+.alcon .ubicacion {
+  padding: 50px;
+  color: #005899;
+  font-family: "Amaranth", sans-serif;
+}
+.alcon .ubicacion p {
+  font-size: 20px;
+}
+.alcon .ubicacion .icon {
+  font-size: 20px;
+  display: inline-block;
+}
+.alcon .ubicacion .map {
+  padding: 0px;
+  width: 100%;
+  height: 70vh;
+  border: solid #005899 5px !important;
+}
+.alcon .ubicacion h3 {
+  font-size: 35px !important;
 }
 
 .arcon, .arser {
   color: #005899;
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: 600;
 }
 .arcon h3, .arser h3 {
   text-align: center;
@@ -187,12 +331,17 @@ h1::before {
 }
 .form-contacto textarea {
   width: 100%;
+  color: #005899;
+  border: #005899;
+}
+.form-contacto input {
+  color: #005899;
 }
 
 .map {
   width: 100%;
   height: 50vh;
-  margin: 0%;
+  margin: 0px;
 }
 
 .alser {
@@ -220,7 +369,7 @@ h1::before {
 
 footer {
   background-color: #1df8b2;
-  background-image: linear-gradient(225deg, #1df8b2 0%, #005899 46%, #1df8b2 100%);
+  background-image: linear-gradient(90deg, #1df8b2 0%, #005899 33%, #005899 66%, #1df8b2 100%);
   text-align: center;
   color: #1df8b2;
   font-size: 35px;
@@ -229,7 +378,7 @@ footer {
 }
 
 .redes {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   letter-spacing: 6px;
 }
@@ -237,5 +386,69 @@ footer {
   color: #1df8b2;
 }
 .redes a:hover {
-  color: #0008ff;
+  color: #1df8b2;
+}
+
+.subir {
+  height: 45px;
+  width: 45px;
+  background-color: #005899;
+  color: #1df8b2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  font-size: 22px;
+}
+
+.subir:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .card .krach {
+    height: 80vh;
+    width: auto;
+  }
+  .alcon {
+    display: flex;
+    flex-direction: column;
+  }
+  .alcon .ubicacion {
+    padding: 10px;
+    margin: 0px;
+  }
+  .alcon .map {
+    margin: 0%;
+    height: 40vh;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card .krach {
+    height: 60vh;
+    width: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card .krach {
+    height: 60vh;
+    width: auto;
+  }
+  .contacto {
+    height: 20em;
+  }
+  .ubicacion .icon {
+    display: flex;
+    flex-direction: column;
+  }
+  .ubicacion p {
+    font-size: 18px !important;
+  }
+  .ubicacion .map {
+    height: 50vh;
+  }
 }/*# sourceMappingURL=style.css.map */

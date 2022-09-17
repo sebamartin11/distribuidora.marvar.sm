@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Baloo+Bhaijaan+2:wght@500&display=swap');
 *{
     margin: 0;
@@ -21,6 +20,10 @@ $size4: 30px;
 $size5: 25px;
 $size6: 20px;
 $ancho: 100%;
+// html
+html{
+    scroll-behavior: smooth;
+}
 // css body
 body{
     background-color: $color1;
@@ -31,12 +34,23 @@ body{
         font-size: $size2;
         font-family: 'Amaranth', sans-serif;
         padding: 10px;
-        margin: 0;
+        margin: 0px;
     }
+}
+// barra de scroll
+body::-webkit-scrollbar{
+    width: 7px;
+    // background-color: #005899;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #005899;
+    height: 300px;
+    border-radius: 5px;
 }
 // css barra navegacion
 .bgnav{
     background-color: $color2;
+    background-image: linear-gradient(45deg, #005899 0%, #005899 33%, #005899 66%, #1df8b2 100%);
 }
 .nav-link{
     color: $color1 !important;
@@ -59,7 +73,7 @@ h1::before{
 .navbar-dark{
     background-color: $color2;
 }
-// jumbotron 
+// jumbotron bunner
 .jumbotron{
     background-image: url(./img/fondo.png);
     background-size: cover;
@@ -90,7 +104,10 @@ h1::before{
         background-color: $color7;
     }
 }
-// css aside izq
+.container-fluid { 
+    overflow: hidden;
+}
+// css aside izq index.html
 .al{
     padding: 0%;
     content: url(../assets/img/camionmarvar.png);
@@ -100,7 +117,7 @@ h1::before{
     width: $ancho;
     height: 100%;
 }
-// css aside der 
+// css aside der index.html
 .ar{
     color: $color2;
     h3{
@@ -118,63 +135,145 @@ h1::before{
     }
     p::selection{
         color: $color2;
-        background-color: $color4;
+        background-color: $color5;
     }
 }
-// card img
+// contrastes de selection
+h1::selection{
+    color: $color1;
+    background-color: $color5;
+}
+h2::selection{
+    color: $color1;
+    background-color: $color5;
+}
+h3::selection{
+    color: $color1;
+    background-color: $color5;
+}
+h4::selection{
+    color: $color2;
+    background-color: $color5;
+}
+label::selection{
+    color: $color2;
+    background-color: $color5;
+}
+p::selection{
+    color: $color2;
+    background-color: $color5;
+}
+// card img productos.html
 .card{
     background-color: $color1;
     padding: 0%;
     text-align: center;
     h4{
         color: $color2;
-        font-weight: 700;
-        font-size: $size3;
+        font-weight: 600;
+        font-size: $size4;
         text-align: center;
         font-family: 'Amaranth', sans-serif;
     }
     p{
         color: $color2;
         font-weight: 500;
-        font-size: $size4;
+        font-size: $size5;
         text-align: center;
         font-family: 'Amaranth', sans-serif;
     }
     .krach{
-        margin: 10px;
-        // height: auto;
-        width: 43vh;
+        padding: 5vh;
+        height: 60vh;
+        width: auto;
         display: flex;
         align-self: center;
     }
+    .krach:hover{
+        transform: rotateZ(20deg);
+        transition: all 0.8s;
+    }
+    .hispanos:hover{
+        transform: rotateZ(20deg);
+        transition: all 0.8s;
+    }
+    .macritas:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
+    }
+    .arrocitas:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
+    }
     .natura{
+        padding: 20px;
         height: 40vh;
         width: auto;
         display: flex;
         align-self: center;
     }
-    img:hover{
-        transform: scale(1.1);
+    .natura:hover{
+        transform: rotateZ(20deg);
         transition: all 0.8s;
     }
+
     .logos{
-        height: 58vh;
+        height: 50vh;
         width: $ancho;
+        animation: rebotar;
+        animation-duration: 10s;
+        @keyframes rebotar{
+            0%{
+                opacity: 0;
+            }
+            1%{
+                transform: translateY(150px);
+                box-shadow: 0px 10px 10px 10px #000;
+            }
+        }
+    }
+    button{
+        display: inline-block;
     }
 }
-
 // aside left contactos.html
 .alcon{
-    padding: 0%;
-    content: url(../assets/img/contacto.jpg);
+    padding: 0px;
+    .contacto{
+    padding: 0px;
     width: $ancho;
+    height: 40em;
     background-position: center;
     background-size: cover;
+    }
+    // ubicacion pag contacto.html
+    .ubicacion{
+        padding: 50px;
+        color: $color2;
+        font-family: 'Amaranth', sans-serif;
+        p{
+            font-size: $size6;
+        }    
+        .icon{
+        font-size: $size6;
+        display: inline-block;
+        }
+        .map{
+        padding: 0px;
+        width: $ancho;
+        height: 70vh;
+        border: solid $color2 5px !important;
+        }
+        h3{
+            @extend h2 ;
+            font-size: $size3 !important;
+        }
+    }
 }
+// aside right contacto.html
 .arcon{
     color: $color2;
-    font-weight: bold;
-    font-size: $size4;
+    font-weight: 600;
     h3{
         text-align: center;
         font-family: 'Amaranth', sans-serif;
@@ -187,6 +286,7 @@ h1::before{
         font-size: $size4;
     }
 }
+// formulario contacto.html
 .form-contacto{
     margin: 50px;
     font-size: $size6;
@@ -196,15 +296,20 @@ h1::before{
     }
     textarea{
         width: $ancho;
+        color: $color2;
+        border: $color2;
+    }
+    input{
+        color: $color2;
     }
 }
-
+// ubicacion index.html
 .map{
     width: $ancho;
     height: 50vh;
-    margin: 0%;
+    margin: 0px;
 }
-    //extends 
+//extends 
 .alser{
     padding: 0%;
     content: url(./img/servicios.jpg);
@@ -231,27 +336,95 @@ h1::before{
 // css footer 
 footer{
     background-color: $color1;
-    background-image: linear-gradient(225deg, #1df8b2 0%, #005899 46%, #1df8b2 100%);
+    background-image: linear-gradient(90deg, #1df8b2 0%, #005899 33%, #005899 66%, #1df8b2 100%);
     text-align: center;    
     color: $color1;
     font-size: $size3;
     font-family: 'Amaranth', sans-serif;
     padding: $size6;
-    // margin: -0.5%;
 }
 // css redes
 .redes{
-    font-size: $size2;
+    font-size: $size3;
     font-weight: bold;
     letter-spacing: 6px;
     a{
-        color: #1df8b2;
+        color: $color1;
     }
     a:hover{
-        color: #0008ff;
+        color: $color1;
     }
 }
-
+// boton subir
+.subir{
+    height: 45px;
+    width: 45px;
+    background-color: $color2;
+    color: $color1;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid $color5;
+    font-size: 22px;
+}
+.subir:hover{
+    color: #fff;
+}
+@media screen and (max-width: 768px){
+    .card{
+        .krach{
+            height: 80vh;
+            width: auto;
+        }
+    }
+    .alcon{
+        display: flex;
+        flex-direction: column;
+        .ubicacion{
+            padding: 10px;
+            margin: 0px;
+        }
+        .map{
+        margin: 0%;
+        height: 40vh;
+        width: $ancho;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .card{
+        .krach{
+            height: 60vh;
+            width: auto;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .card{
+        .krach{
+            height: 60vh;
+            width: auto;
+        }
+    }
+    .contacto{
+        height: 20em;
+    }
+    .ubicacion{
+        .icon{
+            display: flex;
+            flex-direction: column;
+        }
+        p{
+            font-size: 18px !important;
+        }    
+        .map{
+            height: 50vh;
+        }
+    }
+}
 // // maps
 // $colores: (
 //     16px: red,
