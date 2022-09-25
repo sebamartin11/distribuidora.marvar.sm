@@ -3,7 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 // variables
 $color1: #1df8b2;
@@ -177,8 +176,10 @@ p::selection{
     color: $color2;
     background-color: $color5;
 }
-.row{
-    margin: 0px;
+.row1{
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 // card img productos.html
 .card{
@@ -515,6 +516,9 @@ footer{
     }
 }
 @media screen and (max-width: 768px){
+    .al{
+        height: 90vh;
+    }
     .card{
         .krach{
             height: 80vh;
@@ -536,9 +540,6 @@ footer{
         height: 50vh;
         width: $ancho;
         }
-    }
-    .al{
-        height: 92vh;
     }
     .alser{
         height: 100vh;
@@ -576,6 +577,9 @@ footer{
     }
 }
 @media screen and (max-width: 320px){
+    .al{
+        height: 60vh;
+    }
     .card{
         .krach{
             height: 50vh;

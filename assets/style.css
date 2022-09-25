@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -214,8 +213,10 @@ p::selection {
   background-color: #000;
 }
 
-.row {
-  margin: 0px;
+.row1 {
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .card {
@@ -553,6 +554,9 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  .al {
+    height: 90vh;
+  }
   .card .krach {
     height: 80vh;
     width: auto;
@@ -572,9 +576,6 @@ footer {
     margin: 0%;
     height: 50vh;
     width: 100%;
-  }
-  .al {
-    height: 92vh;
   }
   .alser {
     height: 100vh;
@@ -610,6 +611,9 @@ footer {
   }
 }
 @media screen and (max-width: 320px) {
+  .al {
+    height: 60vh;
+  }
   .card .krach {
     height: 50vh;
     width: auto;
