@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Baloo+Bhaijaan+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 // variables
 $color1: #1df8b2;
@@ -55,20 +57,16 @@ body::-webkit-scrollbar-thumb{
 .nav-link{
     color: $color1 !important;
     text-shadow: 0 0 5px $color6;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 15px !important;
     font-weight: 500;
     font-family: 'Amaranth', sans-serif;
 }
 
-h1::before{
-    content: url(./img/logomarvarsnacks.png);
-}
 .navbar-brand{
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Amaranth', sans-serif;
-    color: $color1 !important;
-    text-shadow: 0 0 5px $color5;
+    content: url(./img/logomarvarsnacks.png);
+    display: flex;
+    justify-content: center !important;
 }
 .navbar-dark{
     background-color: $color2;
@@ -96,7 +94,6 @@ h1::before{
 // css botones
 .btn-primary{
     background-color: $color2;
-    margin: 1vh;
     color: $color1;
     font-size: $size6;
     font-family: 'Amaranth', sans-serif;
@@ -115,7 +112,18 @@ h1::before{
     background-position: center;
     background-repeat: no-repeat;
     width: $ancho;
-    height: 100%;
+    height: 100vh;
+    animation: rebotar;
+    animation-duration: 10s;
+    @keyframes rebotar{
+        0%{
+            opacity: 0;
+        }
+        1%{
+            transform: translateY(150px);
+            box-shadow: 0px 10px 10px 10px #000;
+        }
+    }
 }
 // css aside der index.html
 .ar{
@@ -130,13 +138,19 @@ h1::before{
     p{
         font-size: $size6;
         font-weight: bold;
-        text-align: center;
+        text-align: left;
         font-family: 'Amaranth', sans-serif;
     }
     p::selection{
         color: $color2;
         background-color: $color5;
     }
+}
+// ubicacion index.html
+.map{
+    width: $ancho;
+    height: 50vh;
+    margin: 0px;
 }
 // contrastes de selection
 h1::selection{
@@ -163,11 +177,19 @@ p::selection{
     color: $color2;
     background-color: $color5;
 }
+.row{
+    margin: 0px;
+}
 // card img productos.html
 .card{
     background-color: $color1;
     padding: 0%;
     text-align: center;
+    margin: 0px;
+    margin-top: 0px;
+    .card-body{
+        margin: 0;
+    }
     h4{
         color: $color2;
         font-weight: 600;
@@ -182,8 +204,23 @@ p::selection{
         text-align: center;
         font-family: 'Amaranth', sans-serif;
     }
+    .logos{
+        height: 50vh;
+        width: $ancho;
+        animation: rebotar;
+        animation-duration: 10s;
+        @keyframes rebotar{
+            0%{
+                opacity: 0;
+            }
+            1%{
+                transform: translateY(150px);
+                box-shadow: 0px 10px 10px 10px #000;
+            }
+        }
+    }
     .krach{
-        padding: 5vh;
+        padding: 10vh;
         height: 60vh;
         width: auto;
         display: flex;
@@ -215,25 +252,41 @@ p::selection{
     .natura:hover{
         transform: rotateZ(20deg);
         transition: all 0.8s;
+        height: 30vh;
+        display: flex;
+        align-self: center;
+    }
+    .crisjor{
+        padding: 70px;
+        height: 60vh;
+        width: auto;
+        display: flex;
+        align-self: center;
+    }
+    .crisjor:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
     }
 
-    .logos{
-        height: 50vh;
-        width: $ancho;
-        animation: rebotar;
-        animation-duration: 10s;
-        @keyframes rebotar{
-            0%{
-                opacity: 0;
-            }
-            1%{
-                transform: translateY(150px);
-                box-shadow: 0px 10px 10px 10px #000;
-            }
-        }
+    .inysa{
+        padding: 10vh;
+        width: auto;
+        height: 40vh;
+        display: flex;
+        align-self: center;
     }
-    button{
-        display: inline-block;
+    .inysa:hover{
+        transform: rotateZ(20deg);
+        transition: all 0.8s;
+    }
+    .sol{
+        padding: 10vh;
+        height: 60vh;
+        width: auto;
+    }
+    .sol:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
     }
 }
 // aside left contactos.html
@@ -245,6 +298,18 @@ p::selection{
     height: 40em;
     background-position: center;
     background-size: cover;
+    animation: rebotar;
+    animation-duration: 10s;
+    
+        @keyframes rebotar{
+            0%{
+                opacity: 0;
+            }
+            1%{
+                transform: translateY(150px);
+                box-shadow: 0px 10px 10px 10px #000;
+            }
+        }
     }
     // ubicacion pag contacto.html
     .ubicacion{
@@ -262,7 +327,7 @@ p::selection{
         padding: 0px;
         width: $ancho;
         height: 70vh;
-        border: solid $color2 5px !important;
+        border: groove $color2 5px !important;
         }
         h3{
             @extend h2 ;
@@ -281,7 +346,7 @@ p::selection{
         font-size: $size3;
     }
     p{
-        text-align: center;
+        text-align: left;
         font-family: 'Amaranth', sans-serif;
         font-size: $size4;
     }
@@ -290,25 +355,22 @@ p::selection{
 .form-contacto{
     margin: 50px;
     font-size: $size6;
+    color: $color2 !important;
     .form-control{
         width: 100%;
+        height: 8vh;
+        font-size: 24px;
         color: $color2;
     }
     textarea{
         width: $ancho;
         color: $color2;
-        border: $color2;
     }
     input{
         color: $color2;
     }
 }
-// ubicacion index.html
-.map{
-    width: $ancho;
-    height: 50vh;
-    margin: 0px;
-}
+
 //extends 
 .alser{
     padding: 0%;
@@ -316,6 +378,17 @@ p::selection{
         width: $ancho;
         background-position: center;
         background-size: cover;
+        animation: rebotar;
+        animation-duration: 10s;
+        @keyframes rebotar{
+            0%{
+                opacity: 0;
+            }
+            1%{
+                transform: translateY(150px);
+                box-shadow: 0px 10px 10px 10px #000;
+            }
+        }
     }
 .arser{
     @extend .arcon;
@@ -336,25 +409,59 @@ p::selection{
 // css footer 
 footer{
     background-color: $color1;
-    background-image: linear-gradient(90deg, #1df8b2 0%, #005899 33%, #005899 66%, #1df8b2 100%);
+    background-image: linear-gradient(155deg, $color1 0%, #0066ff 50%, #0066ff 100%);
+    width: $ancho;
     text-align: center;    
-    color: $color1;
-    font-size: $size3;
-    font-family: 'Amaranth', sans-serif;
-    padding: $size6;
+    color: #1effb8;
+    font-size: $size6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    padding: $size5;
 }
-// css redes
-.redes{
-    font-size: $size3;
-    font-weight: bold;
-    letter-spacing: 6px;
-    a{
-        color: $color1;
+.logomarvar:hover{
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
+.grupo-1{
+    width: $ancho;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 45px 0px;
+    .box{
+    width: $ancho;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        h3{
+            letter-spacing: 2px;
+        }
+        p{
+            margin-bottom: 5px;
+        }
     }
-    a:hover{
-        color: $color1;
+    // redes sociales
+    .redes{
+    font-size: $size3;
+    padding-left: 150px;
+    letter-spacing: 8px;
+    line-height: 60px;
+        a{
+            color: $color1;
+        }
+        a:hover{
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.8s;
+        }
+    }
+    .grupo-2{
+        padding: 15px 10px;
+        text-align: center;
     }
 }
+
+
 // boton subir
 .subir{
     height: 45px;
@@ -373,12 +480,49 @@ footer{
 .subir:hover{
     color: #fff;
 }
+@media screen and (min-width:1200px){    
+    .inysa{
+        height: 30vh;
+    }
+}
+@media screen and (max-width:992px){    
+    .logos{
+        height: 40vh;
+    }
+    .krach{
+        height: 90vh;
+    }
+    .crisjor{
+        height: 70vh;
+    }
+    .contacto{
+        height: 25em;
+    }
+    .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 30px 0px;
+        text-align: center;
+        .box{
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+        .redes{
+            padding-left: 15px;
+            padding-top: 35px;
+            text-align: center;
+        }
+    }
+}
 @media screen and (max-width: 768px){
     .card{
         .krach{
             height: 80vh;
             width: auto;
         }
+    }
+    .contacto{
+        height: 25em;
     }
     .alcon{
         display: flex;
@@ -389,28 +533,66 @@ footer{
         }
         .map{
         margin: 0%;
-        height: 40vh;
+        height: 50vh;
         width: $ancho;
         }
+    }
+    .al{
+        height: 92vh;
+    }
+    .alser{
+        height: 100vh;
     }
 }
 @media screen and (max-width: 576px) {
     .card{
+        .logos{
+            height: 60vh;
+        }
         .krach{
             height: 60vh;
             width: auto;
         }
-    }
-}
-@media screen and (max-width: 320px){
-    .card{
-        .krach{
-            height: 60vh;
+        .crisjor{
+            height: 80vh;
+        }
+        .inysa{
+            height: 50vh;
+        }
+        .sol{
+            padding: 100px;
+            height: 90vh;
             width: auto;
         }
     }
     .contacto{
         height: 20em;
+    }
+    .map{
+        height: 45vh;
+    }
+    .alser{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 320px){
+    .card{
+        .krach{
+            height: 50vh;
+            width: auto;
+        }
+        .crisjor{
+            height: 70vh;
+        }
+        .inysa{
+            height: 40vh;
+        }
+        .sol{
+            height: 70vh;
+        }
+    }
+    .contacto{
+        height: 16em;
     }
     .ubicacion{
         .icon{
@@ -421,8 +603,11 @@ footer{
             font-size: 18px !important;
         }    
         .map{
-            height: 50vh;
+            height: 40vh;
         }
+    }
+    .alser{
+        height: 60vh;
     }
 }
 // // maps

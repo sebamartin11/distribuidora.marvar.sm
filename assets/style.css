@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Baloo+Bhaijaan+2:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -39,21 +41,16 @@ body::-webkit-scrollbar-thumb {
 .nav-link {
   color: #1df8b2 !important;
   text-shadow: 0 0 5px #333;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 15px !important;
   font-weight: 500;
   font-family: "Amaranth", sans-serif;
 }
 
-h1::before {
-  content: url(./img/logomarvarsnacks.png);
-}
-
 .navbar-brand {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Amaranth", sans-serif;
-  color: #1df8b2 !important;
-  text-shadow: 0 0 5px #000;
+  content: url(./img/logomarvarsnacks.png);
+  display: flex;
+  justify-content: center !important;
 }
 
 .navbar-dark {
@@ -82,7 +79,6 @@ h1::before {
 
 .btn-primary {
   background-color: #005899;
-  margin: 1vh;
   color: #1df8b2;
   font-size: 20px;
   font-family: "Amaranth", sans-serif;
@@ -102,7 +98,29 @@ h1::before {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  -webkit-animation: rebotar;
+          animation: rebotar;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+@-webkit-keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
+}
+@keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
 }
 
 .ar {
@@ -118,7 +136,7 @@ h1::before {
 .ar p {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   font-family: "Amaranth", sans-serif;
 }
 .ar p::-moz-selection {
@@ -128,6 +146,12 @@ h1::before {
 .ar p::selection {
   color: #005899;
   background-color: #000;
+}
+
+.map {
+  width: 100%;
+  height: 50vh;
+  margin: 0px;
 }
 
 h1::-moz-selection {
@@ -190,10 +214,19 @@ p::selection {
   background-color: #000;
 }
 
+.row {
+  margin: 0px;
+}
+
 .card {
   background-color: #1df8b2;
   padding: 0%;
   text-align: center;
+  margin: 0px;
+  margin-top: 0px;
+}
+.card .card-body {
+  margin: 0;
 }
 .card h4 {
   color: #005899;
@@ -209,8 +242,25 @@ p::selection {
   text-align: center;
   font-family: "Amaranth", sans-serif;
 }
+.card .logos {
+  height: 50vh;
+  width: 100%;
+  -webkit-animation: rebotar;
+          animation: rebotar;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+@keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
+}
 .card .krach {
-  padding: 5vh;
+  padding: 10vh;
   height: 60vh;
   width: auto;
   display: flex;
@@ -242,35 +292,40 @@ p::selection {
 .card .natura:hover {
   transform: rotateZ(20deg);
   transition: all 0.8s;
+  height: 30vh;
+  display: flex;
+  align-self: center;
 }
-.card .logos {
-  height: 50vh;
-  width: 100%;
-  -webkit-animation: rebotar;
-          animation: rebotar;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+.card .crisjor {
+  padding: 70px;
+  height: 60vh;
+  width: auto;
+  display: flex;
+  align-self: center;
 }
-@-webkit-keyframes rebotar {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    transform: translateY(150px);
-    box-shadow: 0px 10px 10px 10px #000;
-  }
+.card .crisjor:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
 }
-@keyframes rebotar {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    transform: translateY(150px);
-    box-shadow: 0px 10px 10px 10px #000;
-  }
+.card .inysa {
+  padding: 10vh;
+  width: auto;
+  height: 40vh;
+  display: flex;
+  align-self: center;
 }
-.card button {
-  display: inline-block;
+.card .inysa:hover {
+  transform: rotateZ(20deg);
+  transition: all 0.8s;
+}
+.card .sol {
+  padding: 10vh;
+  height: 60vh;
+  width: auto;
+}
+.card .sol:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
 }
 
 .alcon {
@@ -282,6 +337,19 @@ p::selection {
   height: 40em;
   background-position: center;
   background-size: cover;
+  -webkit-animation: rebotar;
+          animation: rebotar;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+@keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
 }
 .alcon .ubicacion {
   padding: 50px;
@@ -299,7 +367,7 @@ p::selection {
   padding: 0px;
   width: 100%;
   height: 70vh;
-  border: solid #005899 5px !important;
+  border: groove #005899 5px !important;
 }
 .alcon .ubicacion h3 {
   font-size: 35px !important;
@@ -316,7 +384,7 @@ p::selection {
   font-size: 35px;
 }
 .arcon p, .arser p {
-  text-align: center;
+  text-align: left;
   font-family: "Amaranth", sans-serif;
   font-size: 30px;
 }
@@ -324,24 +392,20 @@ p::selection {
 .form-contacto {
   margin: 50px;
   font-size: 20px;
+  color: #005899 !important;
 }
 .form-contacto .form-control {
   width: 100%;
+  height: 8vh;
+  font-size: 24px;
   color: #005899;
 }
 .form-contacto textarea {
   width: 100%;
   color: #005899;
-  border: #005899;
 }
 .form-contacto input {
   color: #005899;
-}
-
-.map {
-  width: 100%;
-  height: 50vh;
-  margin: 0px;
 }
 
 .alser {
@@ -350,6 +414,19 @@ p::selection {
   width: 100%;
   background-position: center;
   background-size: cover;
+  -webkit-animation: rebotar;
+          animation: rebotar;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+@keyframes rebotar {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(150px);
+    box-shadow: 0px 10px 10px 10px #000;
+  }
 }
 
 .form-is {
@@ -369,24 +446,57 @@ p::selection {
 
 footer {
   background-color: #1df8b2;
-  background-image: linear-gradient(90deg, #1df8b2 0%, #005899 33%, #005899 66%, #1df8b2 100%);
+  background-image: linear-gradient(155deg, #1df8b2 0%, #0066ff 50%, #0066ff 100%);
+  width: 100%;
   text-align: center;
-  color: #1df8b2;
-  font-size: 35px;
-  font-family: "Amaranth", sans-serif;
-  padding: 20px;
+  color: #1effb8;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  padding: 25px;
 }
 
-.redes {
+.logomarvar:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
+}
+
+.grupo-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 45px 0px;
+}
+.grupo-1 .box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grupo-1 .box h3 {
+  letter-spacing: 2px;
+}
+.grupo-1 .box p {
+  margin-bottom: 5px;
+}
+.grupo-1 .redes {
   font-size: 35px;
-  font-weight: bold;
-  letter-spacing: 6px;
+  padding-left: 150px;
+  letter-spacing: 8px;
+  line-height: 60px;
 }
-.redes a {
+.grupo-1 .redes a {
   color: #1df8b2;
 }
-.redes a:hover {
-  color: #1df8b2;
+.grupo-1 .redes a:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.8s;
+}
+.grupo-1 .grupo-2 {
+  padding: 15px 10px;
+  text-align: center;
 }
 
 .subir {
@@ -408,10 +518,47 @@ footer {
   color: #fff;
 }
 
+@media screen and (min-width: 1200px) {
+  .inysa {
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .logos {
+    height: 40vh;
+  }
+  .krach {
+    height: 90vh;
+  }
+  .crisjor {
+    height: 70vh;
+  }
+  .contacto {
+    height: 25em;
+  }
+  .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px 0px;
+    text-align: center;
+  }
+  .grupo-1 .box {
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+  .grupo-1 .redes {
+    padding-left: 15px;
+    padding-top: 35px;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .card .krach {
     height: 80vh;
     width: auto;
+  }
+  .contacto {
+    height: 25em;
   }
   .alcon {
     display: flex;
@@ -423,23 +570,61 @@ footer {
   }
   .alcon .map {
     margin: 0%;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
+  }
+  .al {
+    height: 92vh;
+  }
+  .alser {
+    height: 100vh;
   }
 }
 @media screen and (max-width: 576px) {
+  .card .logos {
+    height: 60vh;
+  }
   .card .krach {
     height: 60vh;
     width: auto;
   }
-}
-@media screen and (max-width: 320px) {
-  .card .krach {
-    height: 60vh;
+  .card .crisjor {
+    height: 80vh;
+  }
+  .card .inysa {
+    height: 50vh;
+  }
+  .card .sol {
+    padding: 100px;
+    height: 90vh;
     width: auto;
   }
   .contacto {
     height: 20em;
+  }
+  .map {
+    height: 45vh;
+  }
+  .alser {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card .krach {
+    height: 50vh;
+    width: auto;
+  }
+  .card .crisjor {
+    height: 70vh;
+  }
+  .card .inysa {
+    height: 40vh;
+  }
+  .card .sol {
+    height: 70vh;
+  }
+  .contacto {
+    height: 16em;
   }
   .ubicacion .icon {
     display: flex;
@@ -449,6 +634,9 @@ footer {
     font-size: 18px !important;
   }
   .ubicacion .map {
-    height: 50vh;
+    height: 40vh;
+  }
+  .alser {
+    height: 60vh;
   }
 }/*# sourceMappingURL=style.css.map */
