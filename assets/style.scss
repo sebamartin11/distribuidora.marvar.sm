@@ -105,8 +105,9 @@ body::-webkit-scrollbar-thumb{
 }
 // css aside izq index.html
 .al{
-    padding: 0%;
+    padding: 0;
     content: url(../assets/img/camionmarvar.png);
+    border: groove 4px $color2;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -176,11 +177,12 @@ p::selection{
     color: $color2;
     background-color: $color5;
 }
-.row1{
+.row{
+    padding-right: 0;
+    padding-left: 0;
     margin: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
+
 // card img productos.html
 .card{
     background-color: $color1;
@@ -546,6 +548,9 @@ footer{
     }
 }
 @media screen and (max-width: 576px) {
+    .al{
+        height: 60vh;
+    }
     .card{
         .logos{
             height: 60vh;
@@ -567,7 +572,7 @@ footer{
         }
     }
     .contacto{
-        height: 20em;
+        height: 18em;
     }
     .map{
         height: 45vh;
@@ -578,7 +583,7 @@ footer{
 }
 @media screen and (max-width: 320px){
     .al{
-        height: 60vh;
+        height: 50vh;
     }
     .card{
         .krach{
